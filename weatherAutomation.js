@@ -4,11 +4,10 @@ const puppeteer = require("puppeteer")
   try {
     console.log("Launching the browser...")
 
-    const browser = await puppeteer.launch({ headless: false }) // Set headless: true for background execution
+    const browser = await puppeteer.launch({ headless: false })
     const page = await browser.newPage()
 
     console.log("Starting a quick profile...")
-    // Step 1: Navigate to a quick profile setup page (adjust if API details are provided)
     await page.goto("https://www.multilogin.com/", {
       waitUntil: "networkidle2",
     })
